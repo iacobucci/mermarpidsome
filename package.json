@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "find slides -maxdepth 1 -type f -name '*.md' -exec bash -c 'marp --allow-local-files --html \"$0\" -o \"./out/$(basename ${0%.md}.pdf)\"' {} \\; ; node join_pdfs.js"
+    "build": "find slides -maxdepth 1 -type f -name '*.md' -exec bash -c 'marp --allow-local-files --html \"$0\" -o \"./out/$(basename ${0%.md}.pdf)\"' {} \\; ; node join_pdfs.js merged.pdf"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@marp-team/marp-cli": "^3.4.0",
     "mermaid": "^10.6.1",
-    "pdf-lib": "^1.17.1"
+    "pdf-lib": "^1.17.1",
+    "@fortawesome/fontawesome-free": "^6.5.1"
   }
 }
